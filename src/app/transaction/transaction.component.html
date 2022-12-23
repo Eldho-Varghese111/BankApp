@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+   
+    <div class="container text-center border border-white mt-5  w-50 m " style="border-radius: 30px; ">
+        <h1 class="text-center mt-5 ">Transaction History</h1>
+        <table class=" mt-5 border border-white w-100" style="border-radius: 60px;">
+            <thead class="border border-white">
+                <tr>
+                    <th  class="border border-white">Type</th>
+                    <th  class="border border-white">Amount</th>
+                </tr>         
+            </thead>
+            <tbody class="mb-3">
+                <tr *ngFor = 'let i of transaction'>
+                    <td   class="border border-white">{{i.type}}</td>
+                    <td  class="border border-white">{{i.Amount}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

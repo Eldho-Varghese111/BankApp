@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <form action="" (ngSubmit)="login()" class="main">
+      
+
+        <div class="container w-50 p-2 mt-5 border   text-center "style="border-radius: 30px;   "  >
+            <h1 class="text-center  mb-3 mt-2">Login Page</h1>
+         
+            <div class="mt-2 p-2">
+                <input name="acno" id="acid" [(ngModel)]="acno" class="text-white" type="text" placeholder="account number" style="border-radius: 10px;" class="border ">
+            </div>
+            <div class="mt-2 p-2 ">
+                <input name="psw" id="pid" [(ngModel)]="psw"   type="password" placeholder="password" style="border-radius: 10px;" class="border">
+            </div>
+            <div class="mt-1 p-1">
+                <button class="btn btn-success"   style="border-radius: 10px;" type="submit"  >LOGIN</button>
+                <p class="mt-2">New User ? <a routerLink="register">Register</a></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
