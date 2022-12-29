@@ -14,19 +14,19 @@
       
         <div class="row   ">
 
-            <form (ngSubmit)="deposit()" class="main">
+            <form (ngSubmit)="deposit()" class="main" [formGroup]="depositForm">
                 <div class="deposit    p-2 ">
                     <h2>Deposit</h2>
                     <div class=" mt-2 p-2 ">
-                     <input type="text" name="acno" [(ngModel)]="acno" id="acid" placeholder="Account Number"style="border-radius: 30px;" class="w-100"  >
+                     <input type="text" name="acno" formControlName="acno" id="acid" placeholder="Account Number"style="border-radius: 30px;" class="w-100"  >
                     </div>
          
                     <div class=" mt-2 p-2">
-                     <input type="text" name="psw" [(ngModel)]="psw" id="pswid" placeholder="Password" style="border-radius: 30px;">
+                     <input type="text" name="psw" formControlName="psw" id="pswid" placeholder="Password" style="border-radius: 30px;">
                     </div>
          
                     <div class=" mt-2 p-2">
-                     <input type="number" name="amt" id="amtid" [(ngModel)]="amnt" placeholder="Amount" style="border-radius: 30px;">
+                     <input type="number" name="amt" id="amtid" formControlName="amnt" placeholder="Amount" style="border-radius: 30px;">
                     </div>
          
                     <div class="mt-2 p-2">
@@ -39,19 +39,19 @@
 
         <div class="row ml-5 p-2" >
 
-            <form  (ngSubmit)="withdraw()" class="main">
+            <form  (ngSubmit)="withdraw()" class="main" [formGroup]="withdrawForm">
                 <div class="withdraw p-2 text-center ">
                     <h2 class="text-center">Withdraw</h2>
                     <div class=" mt-2 p-2">
-                     <input type="text" name="acno1" id="acid1" [(ngModel)]="acno1" placeholder="Account Number"style="border-radius: 30px; ">
+                     <input type="text" name="acno1" id="acid1" formControlName="acno1" placeholder="Account Number"style="border-radius: 30px; ">
                     </div>
          
                     <div class=" mt-2 p-2">
-                     <input type="text" name="psw1" id="pswid1" [(ngModel)]="psw1" placeholder="Password" style="border-radius: 30px;">
+                     <input type="text" name="psw1" id="pswid1" formControlName="psw1" placeholder="Password" style="border-radius: 30px;">
                     </div>
          
                     <div class=" mt-2 p-2">
-                     <input type="number" name="amnt1" id="amtid1" [(ngModel)]="amnt1" placeholder="Amount" style="border-radius: 30px;">
+                     <input type="number" name="amnt1" id="amtid1" formControlName="amnt1" placeholder="Amount" style="border-radius: 30px;">
                     </div>
          
                     <div class="mt-2 p-2">
