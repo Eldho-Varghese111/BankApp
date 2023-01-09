@@ -3,6 +3,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: auto;
     
+}
+
+.rght
+{
+    
+    position: absolute;
+    right: 130px;
+    top: 100px;
+    border-radius: 30px;
+    
+}
+
+.delete
+{
+    position: absolute;
+    right: 130px;
+    top: 180px;
+    border-radius: 30px;
 }

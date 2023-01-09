@@ -9,14 +9,24 @@
 </head>
 <body>
     <h1 class="text-center mt-5">Welcome {{user}}</h1>
+    <h4 class="ml-5">{{date |date :'medium'}}</h4>
     <a routerLink="/transaction" class=" m-5 text-dark " style="text-decoration: none; font-size: large;">View Transaction History</a>
-    <div class="container p-2  main  text-center " >
-      
-        <div class="row   ">
+    <div class="p-2 ">
+        <button (click)="logout()" class="btn btn-danger rght">Logout</button>   
+    </div>
 
-            <form (ngSubmit)="deposit()" class="main" [formGroup]="depositForm">
+    <div class="p-2 ">
+        <button (click)="deleteconfirm()" class="btn btn-danger delete">Delete</button>
+    </div>
+
+    <app-deleteconfirm (onCancel)="oncancel()" [item]="acno"></app-deleteconfirm>
+
+    <div class="container p-2  main  text-center " >
+        <div class="row">
+            <form [ngClass]="acno?'style':''" (ngSubmit)="deposit()" class="main" [formGroup]="depositForm">
                 <div class="deposit    p-2 ">
                     <h2>Deposit</h2>
+
                     <div class=" mt-2 p-2 ">
                      <input type="text" name="acno" formControlName="acno" id="acid" placeholder="Account Number"style="border-radius: 30px;" class="w-100"  >
                     </div>
@@ -33,13 +43,12 @@
                      <button type="submit" class="btn btn-success" style="border-radius: 10px;">Deposit</button>
                     </div>
                  </div>
-            </form>
-            
+            </form>   
         </div>
 
         <div class="row ml-5 p-2" >
 
-            <form  (ngSubmit)="withdraw()" class="main" [formGroup]="withdrawForm">
+            <form  (ngSubmit)="withdraw()" class="main" [ngClass]="acno?'style':''"  [formGroup]="withdrawForm">
                 <div class="withdraw p-2 text-center ">
                     <h2 class="text-center">Withdraw</h2>
                     <div class=" mt-2 p-2">
